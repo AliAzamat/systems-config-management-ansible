@@ -1,0 +1,5 @@
+# The gateways group is tuned differently — fewer workers, more verbose logs.
+# Same template, same role; only these values differ.
+worker_threads: 2
+max_connections: 1024
+log_level: info
