@@ -1,0 +1,11 @@
+# Managed by Ansible — do not edit by hand. Changes here are overwritten.
+# Rendered per host from variables, so one template fits the whole fleet.
+
+[service]
+name = trading-gateway
+bind_address = {{ ansible_host }}
+worker_threads = {{ worker_threads }}
+max_connections = {{ max_connections }}
+
+[logging]
+level = {{ log_level | default("info") }}
