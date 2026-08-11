@@ -1,0 +1,11 @@
+# Default variables for the role. These are the LOWEST-priority values, so a
+# play or inventory can override any of them. Defaults make a role usable
+# out of the box while staying configurable per fleet.
+baseline_packages:
+  - htop
+  - chrony
+  - net-tools
+service_user: trader
+worker_threads: 4
+max_connections: 1024
+log_level: info
