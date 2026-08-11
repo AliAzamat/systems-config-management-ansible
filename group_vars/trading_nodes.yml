@@ -1,0 +1,6 @@
+# Variables for every host in the trading_nodes group. Ansible auto-loads
+# group_vars/<group>.yml — no include needed. These override the play's
+# generic values, so the SAME playbook tunes each group differently.
+worker_threads: 8          # trading nodes get more workers
+max_connections: 4096      # and a higher connection ceiling
+log_level: warn            # quieter in steady state
