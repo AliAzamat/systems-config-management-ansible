@@ -1,0 +1,7 @@
+# The playbook is now tiny: it maps host groups to roles. All the HOW lives in
+# the role; the playbook only declares WHICH baseline applies to WHICH hosts.
+- name: Baseline the trading fleet
+  hosts: trading_nodes
+  become: true
+  roles:
+    - baseline
